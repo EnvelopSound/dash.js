@@ -29864,6 +29864,12 @@ var MediaPlayerEvents = (function (_EventsBase) {
     this.CAPTION_RENDERED = 'captionRendered';
 
     /**
+     * Triggered when a caption is updated.
+     * @event MediaPlayerEvents#CAPTION_UPDATED
+     */
+    this.CAPTION_UPDATED = 'captionUpdated';
+
+    /**
      * Triggered when the caption container is resized.
      * @event MediaPlayerEvents#CAPTION_CONTAINER_RESIZE
      */
@@ -51133,7 +51139,7 @@ function TextTracks() {
             return;
         }
 
-        for (var item = 0; item < captionData.length; item++) {
+        var _loop = function (item) {
             var cue = undefined;
             var currentItem = captionData[item];
 
@@ -51160,6 +51166,7 @@ function TextTracks() {
                 captionContainer.style.height = actualVideoHeight + 'px';
 
                 cue.onenter = function () {
+                    eventBus.trigger(_coreEventsEvents2['default'].CAPTION_UPDATED, { cue: cue, currentTrackIdx: currentTrackIdx });
                     if (track.mode === _constantsConstants2['default'].TEXT_SHOWING) {
                         if (this.isd) {
                             renderCaption(this);
@@ -51202,6 +51209,8 @@ function TextTracks() {
                         }
                     }
                     cue.onenter = function () {
+
+                        eventBus.trigger(_coreEventsEvents2['default'].CAPTION_UPDATED, { cue: cue, currentTrackIdx: currentTrackIdx });
                         if (track.mode === _constantsConstants2['default'].TEXT_SHOWING) {
                             eventBus.trigger(_coreEventsEvents2['default'].CAPTION_RENDERED, { currentTrackIdx: currentTrackIdx });
                         }
@@ -51221,6 +51230,10 @@ function TextTracks() {
                 track.addCue(cue);
                 throw e;
             }
+        };
+
+        for (var item = 0; item < captionData.length; item++) {
+            _loop(item);
         }
     }
 
