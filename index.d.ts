@@ -358,6 +358,8 @@ declare namespace dashjs {
 
         on(type: CaptionRenderedEvent['type'], listener: (e: CaptionRenderedEvent) => void, scope?: object): void;
 
+        on(type: CaptionUpdatedEvent['type'], listener: (e: CaptionUpdatedEvent) => void, scope?: object): void;
+        
         on(type: CaptionContainerResizeEvent['type'], listener: (e: CaptionContainerResizeEvent) => void, scope?: object): void;
 
         on(type: DynamicToStaticEvent['type'], listener: (e: DynamicToStaticEvent) => void, scope?: object): void;
@@ -675,6 +677,7 @@ declare namespace dashjs {
         CAN_PLAY: 'canPlay';
         CAN_PLAY_THROUGH: 'canPlayThrough';
         CAPTION_RENDERED: 'captionRendered';
+        CAPTION_UPDATED: 'captionUpdated';
         CAPTION_CONTAINER_RESIZE: 'captionContainerResize';
         CONFORMANCE_VIOLATION: 'conformanceViolation'
         DYNAMIC_TO_STATIC: 'dynamicToStatic';
@@ -879,6 +882,12 @@ declare namespace dashjs {
         type: MediaPlayerEvents['CAPTION_RENDERED'];
         captionDiv: HTMLDivElement;
         currentTrackIdx: number;
+    }
+
+    export interface CaptionUpdatedEvent extends Event {
+        type: MediaPlayerEvents['CAPTION_UPDATED'];
+        currentTrackIdx: number;
+        cue: VTTCue | TextTrackCue;
     }
 
     export interface CaptionContainerResizeEvent extends Event {
