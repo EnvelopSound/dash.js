@@ -33308,19 +33308,11 @@ function Stream(config) {
 
     return streamProcessor;
   }
-<<<<<<< HEAD
   /**
    * Creates the SourceBufferSink objects for all StreamProcessors
    * @param {array} previousBuffersSinks
    * @return {Promise<object>}
    * @private
-=======
-  /**
-   * Creates the SourceBufferSink objects for all StreamProcessors
-   * @param {array} previousBuffers
-   * @return {Promise<object>}
-   * @private
->>>>>>> cfb64e59 (build dist files)
    */
 
 
@@ -33902,7 +33894,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_BoxParser__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./utils/BoxParser */ "./src/streaming/utils/BoxParser.js");
 /* harmony import */ var _vo_metrics_PlayList__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./vo/metrics/PlayList */ "./src/streaming/vo/metrics/PlayList.js");
 /* harmony import */ var _dash_controllers_SegmentsController__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../dash/controllers/SegmentsController */ "./src/dash/controllers/SegmentsController.js");
-<<<<<<< HEAD
 /* harmony import */ var _vo_metrics_HTTPRequest__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./vo/metrics/HTTPRequest */ "./src/streaming/vo/metrics/HTTPRequest.js");
 /**
  * The copyright in this software is being made available under the BSD License,
@@ -33933,37 +33924,6 @@ __webpack_require__.r(__webpack_exports__);
  *  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  *  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  *  POSSIBILITY OF SUCH DAMAGE.
-=======
-/**
- * The copyright in this software is being made available under the BSD License,
- * included below. This software may be subject to other third party and contributor
- * rights, including patent rights, and no such rights are granted under this license.
- *
- * Copyright (c) 2013, Dash Industry Forum.
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
- *  * Redistributions of source code must retain the above copyright notice, this
- *  list of conditions and the following disclaimer.
- *  * Redistributions in binary form must reproduce the above copyright notice,
- *  this list of conditions and the following disclaimer in the documentation and/or
- *  other materials provided with the distribution.
- *  * Neither the name of Dash Industry Forum nor the names of its
- *  contributors may be used to endorse or promote products derived from this software
- *  without specific prior written permission.
- *
- *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY
- *  EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- *  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
- *  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
- *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
- *  NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
- *  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- *  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
- *  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
- *  POSSIBILITY OF SUCH DAMAGE.
->>>>>>> cfb64e59 (build dist files)
  */
 
 
@@ -34250,18 +34210,11 @@ function StreamProcessor(config) {
       }
     });
   }
-<<<<<<< HEAD
   /**
    * ScheduleController indicates that an init segment needs to be fetched.
    * @param {object} e
    * @param {boolean} rescheduleIfNoRequest - Defines whether we reschedule in case no valid request could be generated
    * @private
-=======
-  /**
-   * ScheduleController indicates that an init segment needs to be fetched.
-   * @param {object} e
-   * @private
->>>>>>> cfb64e59 (build dist files)
    */
 
 
@@ -34301,16 +34254,10 @@ function StreamProcessor(config) {
       }
     }
   }
-<<<<<<< HEAD
   /**
    * ScheduleController indicates that a media segment is needed
    * @param {boolean} rescheduleIfNoRequest -  Defines whether we reschedule in case no valid request could be generated
    * @private
-=======
-  /**
-   * ScheduleController indicates that a media segment is needed
-   * @private
->>>>>>> cfb64e59 (build dist files)
    */
 
 
@@ -34586,7 +34533,6 @@ function StreamProcessor(config) {
       _handleFragmentLoadingError(e);
     }
   }
-<<<<<<< HEAD
   /**
    * If we encountered an error when loading the fragment we need to handle it according to the segment type
    * @private
@@ -34618,11 +34564,6 @@ function StreamProcessor(config) {
   /**
    * Callback function triggered by the TextController whenever a track is changed for fragmented text. Will only be triggered if textracks have previously been disabled.
    * @private
-=======
-  /**
-   * Callback function triggered by the TextController whenever a track is changed for fragmented text. Will only be triggered if textracks have previously been disabled.
-   * @private
->>>>>>> cfb64e59 (build dist files)
    */
 
 
@@ -42212,18 +42153,11 @@ function StreamController() {
       _stopPlaybackEndedTimerInterval();
     }
   }
-<<<<<<< HEAD
   /**
    * Returns the next stream to be played relative to the stream provided. If no stream is provided we use the active stream.
    * In order to avoid rounding issues we should not use the duration of the periods. Instead find the stream with starttime closest to startTime of the previous stream.
    * @param {object} stream
    * @return {null|object}
-=======
-  /**
-   * Returns the next stream to be played relative to the stream provided. If no stream is provided we use the active stream.
-   * @param {object} stream
-   * @return {null|object}
->>>>>>> cfb64e59 (build dist files)
    */
 
 

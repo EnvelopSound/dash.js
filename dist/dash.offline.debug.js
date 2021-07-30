@@ -14157,8 +14157,8 @@ function OfflineController(config) {
   }
   /*
   ---------------------------------------------------------------------------
-       OFFLINE CONTROLLER API
-   ---------------------------------------------------------------------------
+        OFFLINE CONTROLLER API
+    ---------------------------------------------------------------------------
   */
 
   /**
@@ -16511,6 +16511,12 @@ var MediaPlayerEvents = /*#__PURE__*/function (_EventsBase) {
      */
 
     _this.CAPTION_RENDERED = 'captionRendered';
+    /**
+     * Triggered when a caption is updated.
+     * @event MediaPlayerEvents#CAPTION_UPDATED
+     */
+
+    _this.CAPTION_UPDATED = "captionUpdated";
     /**
      * Triggered when the caption container is resized.
      * @event MediaPlayerEvents#CAPTION_CONTAINER_RESIZE
