@@ -32473,7 +32473,7 @@ function SourceBufferSink(config) {
       // it definitely doesn't understand 'application/mp4;codecs="stpp"'
       // - currently no browser does, so check for it and use our own
       // implementation. The same is true for codecs="wvtt".
-      if (codec.match(/application\/mp4;\s*codecs="(stpp|wvtt).*"/i)) {
+      if (codec.match(/application\/mp4;\s*codecs="(stpp|wvtt).*"/i) || codec.match(/text/)) {
         return _initializeForText(streamInfo);
       }
 
